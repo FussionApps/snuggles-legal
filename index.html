@@ -3,24 +3,187 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Snuggles — Legal</title>
+<title>Snuggles — Pet journaling for the moments you don't want to forget</title>
+<meta name="description" content="Snuggles is a pet journaling app from FussionApp, LLC. Capture, share, and preserve every tail wag, head bonk, and zoomie of your pet's life.">
 <link rel="stylesheet" href="/style.css">
+<style>
+  .hero h1 {
+    font-size: 40px;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    margin: 8px 0 16px;
+  }
+  .hero .tagline {
+    font-size: 20px;
+    color: var(--accent);
+    font-weight: 500;
+    margin: 0 0 24px;
+    letter-spacing: -0.01em;
+  }
+  .hero .lede {
+    font-size: 17px;
+    color: var(--fg);
+    margin: 0 0 8px;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin: 16px 0 8px;
+  }
+  .feature {
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 18px 18px 16px;
+  }
+  .feature .feature-title {
+    font-weight: 600;
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+  }
+  .feature .feature-body {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  .doc-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 12px;
+    margin: 16px 0 8px;
+    padding: 0;
+    list-style: none;
+  }
+  .doc-list li {
+    margin: 0;
+  }
+  .doc-list a.doc-card {
+    display: block;
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 16px 18px;
+    color: var(--fg);
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+  .doc-list a.doc-card:hover {
+    border-color: var(--accent);
+    text-decoration: none;
+    background: var(--code-bg);
+  }
+  .doc-list a.doc-card .doc-title {
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .doc-list a.doc-card .doc-desc {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .doc-list .badge {
+    display: inline-block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 1px 8px;
+    margin-left: 8px;
+    vertical-align: 2px;
+  }
+
+  .contact {
+    background: var(--code-bg);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 16px 0 0;
+    font-size: 15px;
+  }
+</style>
 </head>
 <body>
 <div class="container">
-  <header>
+  <header class="hero">
     <div class="brand">Snuggles</div>
-    <h1>Legal</h1>
+    <h1>Pet journaling for the moments you don't want to forget.</h1>
+    <p class="tagline">Where every tail wag, head bonk, and zoomie lives forever.</p>
+    <p class="lede">Snuggles is a mobile app for capturing your pet's life &mdash; photos, videos, milestones, and the small everyday things &mdash; and sharing them with the people who love your pet too.</p>
     <div class="nav">
-      <a href="/privacy/">Privacy Policy</a>
-      <a href="/terms/">SMS Terms</a>
-      <a href="/sms-consent/">SMS Consent Flow</a>
+      <a href="#about">About</a>
+      <a href="#documents">Documents</a>
+      <a href="#contact">Contact</a>
     </div>
   </header>
-  <p>Legal documents for <strong>Snuggles</strong>, a pet journaling app operated by FussionApp, LLC.</p>
-  <p>Contact: <a href="mailto:support.snuggles@fussion.app">support.snuggles@fussion.app</a></p>
+
+  <h2 id="about">What Snuggles is</h2>
+  <p>Snuggles is a pet journaling app for owners who want more than a camera roll. Build a timeline for each of your pets, share it with your family, and let the app help you remember the things you'd otherwise lose track of.</p>
+
+  <div class="feature-grid">
+    <div class="feature">
+      <div class="feature-title">A timeline per pet</div>
+      <p class="feature-body">Photos, videos, captions, notes, and reminders &mdash; organized by pet and date, not buried in your phone.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-title">Shared family journals</div>
+      <p class="feature-body">Invite partners, co-parents, and pet sitters. Everyone sees the same timeline; everyone can add to it.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-title">Smart pet tagging</div>
+      <p class="feature-body">When you add a photo, Snuggles suggests which of your pets it is &mdash; matching is computed on your device.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-title">Milestones &amp; reminders</div>
+      <p class="feature-body">Birthdays, vet appointments, gotcha-days, and the small recurring moments worth remembering.</p>
+    </div>
+  </div>
+
+  <h2 id="documents">Documents &amp; policies</h2>
+  <p>Public-facing legal and compliance documents for Snuggles. The Messaging Program page is the canonical reference for our SMS use case (carrier review, A2P 10DLC).</p>
+
+  <ul class="doc-list">
+    <li>
+      <a class="doc-card" href="/messaging-program/">
+        <div class="doc-title">Messaging Program <span class="badge">A2P 10DLC</span></div>
+        <div class="doc-desc">How Snuggles uses SMS for sign-in verification &mdash; full program description, opt-in flow, sample message, and HELP/STOP behavior.</div>
+      </a>
+    </li>
+    <li>
+      <a class="doc-card" href="/sms-consent/">
+        <div class="doc-title">SMS Consent Flow</div>
+        <div class="doc-desc">Screenshot walkthrough of how users opt in to receive an SMS verification code from Snuggles.</div>
+      </a>
+    </li>
+    <li>
+      <a class="doc-card" href="/terms/">
+        <div class="doc-title">SMS Terms</div>
+        <div class="doc-desc">The legally binding terms governing the Snuggles SMS program.</div>
+      </a>
+    </li>
+    <li>
+      <a class="doc-card" href="/privacy/">
+        <div class="doc-title">Privacy Policy</div>
+        <div class="doc-desc">What we collect, why, who we share it with, how long we retain it, and the choices you have.</div>
+      </a>
+    </li>
+  </ul>
+
+  <h2 id="contact">Built by FussionApp, LLC</h2>
+  <p>Snuggles is built and operated by <strong>FussionApp, LLC</strong>, a U.S. limited-liability company. We're a small team that ships software for the moments worth keeping.</p>
+
+  <div class="contact">
+    <strong>Support &amp; press:</strong> <a href="mailto:support.snuggles@fussion.app">support.snuggles@fussion.app</a>
+  </div>
+
   <footer>
-    &copy; FussionApp, LLC
+    &copy; FussionApp, LLC ·
+    <a href="mailto:support.snuggles@fussion.app">support.snuggles@fussion.app</a> ·
+    <a href="/privacy/">Privacy</a> ·
+    <a href="/terms/">SMS Terms</a> ·
+    <a href="/messaging-program/">Messaging Program</a>
   </footer>
 </div>
 </body>
